@@ -1,82 +1,60 @@
-\documentclass{article}
+\documentclass[a4paper]{article}
+\usepackage{color}
+\usepackage{url}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage{amssymb}
 
+\usepackage[english,serbian]{babel}
+
+\usepackage[unicode]{hyperref}
+\hypersetup{colorlinks,citecolor=green,filecolor=green,linkcolor=blue,urlcolor=blue}
+
 \begin{document}
 
+\title{Povlačenje lanca uvis\\ \vskip 0.2in \small{Seminarski rad u okviru kursa\\ Osnove matematičkog modeliranja\\ Matematički fakultet} \vskip 5.0in}
+
+\author{
+Matija Đorđević\\
+59/2022
+\and
+Filip Nedeljković\\
+43/2022
+}
+\date{\today}
+\maketitle
+\newpage
+
+
 \section{Opis problema}
-
-
 Na zemlji leži sklupčan lanac velike dužine i težine T po dužnom metru. U početnom trenutku sa
 nivoa zemlje uvis konstantna sila F deluje na lanac. Lanac počinje da se penje uvis.
 Izvodimo matematički model kretanja vrha lanca. \\
-Izračunaćemo maksimalnu visinu do koje će lanac stići i vreme potrebno da stigne do te visine, kao 
-i vreme za koje će lanac ponovo pasti na zemlju. \\ 
-Pretpostavke modela su da nema otpora sredine.
-\\\\
-This is a sample LaTeX document with an equation:
-\[E = mc^2\]
-
+Izračunavamoo maksimalnu visinu do koje će lanac stići i vreme potrebno da stigne do te visine, kao 
+i vreme za koje će lanac ponovo pasti na zemlju. \\
 
 \section{Fizicka formulacija}
 
-
-\begin{itemize}
-  \item Nema trenja ni otpora sredine
-  \item Sila
-  \item x(0)=0
-  \item x(0) = 0
-  \item T -tezina po duznom metru (N/m)
-  \item F -konstanta sila koja deluje uvis
-\end{itemize}
-
-
-Na lanac deluje konstantna sila F uvis i još samo sila 
-gravitacije Zemlje (Fg), a sve druge sile zanemarujemo
-kao što je na primer sila koja nastaje
-uticajem rotacija Zemlje itd. 
-Lanac je dovoljno dugačak tako da se lanac nikada neće podići
-sa Zemlje. Na početku brzina vrha lanca je 0 i visina u odnosu
-na Zemlju je 0. Masa koju podižemo je 0. Kako se lanac diže
-dolazi do promene mase koje treba podići (ne diže se ukupna masa lanca odjednom)
-Odnosno ovaj model predstavlja sistem sa promenljivom masom. 
-Kako je masa promenljiva ne moze da se koristi formula F=ma nego
-mora se koristiti drugi njutnov zakon preko impulsa p=F/t.
-
-....drugi njutnov zakon... 
-
-Sada radimo izvodjenje: 
-x(0) 0, x() uslove ...
-iyvodejnje sa opisima
-
-
-
-
-
-m(x) = (T/g) * x 
-
-
-
-rezultujuća sila Fr nikada ne može
-podići ceo lanac.
-
-
-
-Za rešavanje ovog problema koristi se drugi njutnov zakon, ali naš problem
-ima promenljivu masu pa zato koristimo forumulu preko impulsa. Dizanjem i spuštanjem lanca
-dešava se promena mase. 
-
-Drugi njutnov zakon je ovo
-
-Iz problema imamo ove početne uslove
-
-malo izvodjenja pa dif jednacina
-
-resenje....
+Jedine sile koje deluju na lanac su konstantna sila F  koja vuče vrh lanca 
+naviše i sila Zemljine teže (Fg). U posmatranom modelu nećemo razmarati
+otpor vazduha i trenje podloge. Pretpostavljamo da je da je gravitaciono
+ubrzanje g konstantno. Odbacujemo uticaj rotacije Zemlje na lanac.
+Lanac je dovoljno dugačak tako da se ceo lanac nikada neće podići
+sa Zemlje. \\
+Na početku  se lanac nalazi na visini od 0m. Početna brzina kojom se kreće lanac je 0m/s. 
+Ovaj model predstavlja sistem promenljive mase. 
+Početna masa koja se podiže je 0kg. Kako se lanac kreće naviše 
+tako se menja količina mase koju drži vrh lanca.\\
+Da bi smo mogli opisati kretanje lanca koristimo Drugi Njutnov zakon.
+Kako je masa promenljiva ne moze da se koristi Drugi njutnov zakon
+u obliku F=ma, gde je F sila koja deluje na telo, m masa tela, a
+a njegovo ubrzanje, nego ćemo silu koja deluje na telo izraziti 
+preko promene impulsa kroz vreme, odnosno F=dp/dt, gde 
+p predstavlja impuls tela, a t vreme.
 
 \section{Formiranje modela}
-
-
 
 \[
 x\left( 0 \right)=0,\quad x'\left( 0 \right)=1,
@@ -171,6 +149,10 @@ dt = \frac{dx}{\sqrt{\frac{Fg}{T} - \frac{2gx}{3}}} \quad \left(\text{integralis
 
 
 
-https://isaacscience.org/concepts/cp_newtonii
+
+\end{document}
+
+
+
 
 \end{document}
