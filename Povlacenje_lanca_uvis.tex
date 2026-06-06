@@ -76,6 +76,97 @@ resenje....
 
 \section{Formiranje modela}
 
+
+
+\[
+x\left( 0 \right)=0,\quad x'\left( 0 \right)=1,
+\]
+\[
+F \text{-- konstantna sila uvis},\quad
+T \text{-- težina po dužnom metru},\quad
+g \text{-- ubrzanje gravitacije}
+\]
+
+\[
+m\left(x\right) = \frac{T}{g}\,x
+\]
+
+\[
+\frac{d}{dt}\left(mv\right)=F-Tx \text{- koristimo II Njutnov zakon preko impulsa}
+\]
+
+Promena impulsa je jedna 
+razlici F i T*x gde x prdstvalja trenutnu visinu vrha lanca
+Sređivanjem dobijamo
+
+
+\[
+\frac{T}{g}\frac{d}{dt}\left(x \, x'\right) = F - Tx
+\]
+
+
+\[
+\frac{d}{dt}\left(x \, x'\right) = x'^{2} + xx'' 
+\]
+
+Iz prethodna dva koraka sledi:
+
+\[
+x'^{2} + xx'' = g\left(\frac{F}{T} - x\right)
+\]
+
+Transformišemo diferencijalnu jednačinu u lepši oblik pomoću
+
+\[
+x'' = v\frac{dv}{dx}  \quad \left(v = x' \quad v\text{ je brzina}\right) \quad \left(v = \frac{dx}{dt}\right) \quad \left(\frac{dv}{dt} = \frac{dvdx}{dxdt}\right) 
+\]
+
+\[
+xv\frac{dv}{dx} + v^{2} = \frac{Fg}{T} - gx \quad \text{pomnožimo obe strane jednačine sa } 2x
+\]
+
+\[
+2x^{2}v\frac{dv}{dx} + 2xv^{2} = \frac{2Fgx}{T} - 2gx^{2} 
+\]
+
+Kako je: 
+\[
+\frac{d}{dx}\left(x^{2}v^{2}\right) = 2xv^{2} + 2x^{2}v\frac{dv}{dx}
+\]
+
+Sledi da je:
+
+\[
+\frac{d}{dx}\left(x^{2}v^{2}\right) = \frac{2Fgx}{T} - 2gx^{2} \quad \left(\text{sada integralimo obe strane jednačine sa} \quad \int_0^x \right)
+\]
+
+\[
+x^{2}v^{2} = \int_0^x \left(\frac{2Fgy}{T} - 2gy^{2}\right)dy
+\]
+
+\[
+x^{2}v^{2} = \frac{Fgx^{2}}{T} - \frac{2gx^{3}}{3}  \quad \left(\text{podelimo izraz sa } x^{2}\right)
+\]
+
+\[
+v^{2} = \frac{Fg}{T} - \frac{2gx}{3}
+\]
+
+Posmatraćemo slučaj kada lanac se diže uvis tako da uzimamo
+pozitivno rešenje brzine
+
+\[
+v = \sqrt{\frac{Fg}{T} - \frac{2gx}{3}}
+\]
+
+\[
+\frac{dx}{dt} = \sqrt{\frac{Fg}{T} - \frac{2gx}{3}}
+\]
+
+\[
+dt = \frac{dx}{\sqrt{\frac{Fg}{T} - \frac{2gx}{3}}} \quad \left(\text{integralisemo od početnog trenutka 0 do nekog trenutka t} \quad \int_0^t \right)
+\]
+
 \section{Rezultati}
 
 
