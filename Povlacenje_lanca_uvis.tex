@@ -32,7 +32,7 @@ Filip Nedeljković\\
 Na zemlji leži sklupčan lanac velike dužine i težine T po dužnom metru. U početnom trenutku sa
 nivoa zemlje uvis konstantna sila F deluje na lanac. Lanac počinje da se penje uvis.
 Izvodimo matematički model kretanja vrha lanca. \\
-Izračunavamoo maksimalnu visinu do koje će lanac stići i vreme potrebno da stigne do te visine, kao 
+Izračunavamo maksimalnu visinu do koje će lanac stići i vreme potrebno da stigne do te visine, kao 
 i vreme za koje će lanac ponovo pasti na zemlju. \\
 
 \section{Fizicka formulacija}
@@ -42,22 +42,24 @@ naviše i sila Zemljine teže (Fg). U posmatranom modelu nećemo razmarati
 otpor vazduha i trenje podloge. Pretpostavljamo da je da je gravitaciono
 ubrzanje g konstantno. Odbacujemo uticaj rotacije Zemlje na lanac.
 Lanac je dovoljno dugačak tako da se ceo lanac nikada neće podići
-sa Zemlje. \\
+sa zemlje. Pretpostavljamo da je deo lanca koji je podignut
+vertikalan i savršeno prav. Debljinu lanca zanemarujemo.
+Smatramo da je lanac neistegljiv\\
 Na početku  se lanac nalazi na visini od 0m. Početna brzina kojom se kreće lanac je 0m/s. 
 Ovaj model predstavlja sistem promenljive mase. 
 Početna masa koja se podiže je 0kg. Kako se lanac kreće naviše 
 tako se menja količina mase koju drži vrh lanca.\\
-Da bi smo mogli opisati kretanje lanca koristimo Drugi Njutnov zakon.
-Kako je masa promenljiva ne moze da se koristi Drugi njutnov zakon
-u obliku F=ma, gde je F sila koja deluje na telo, m masa tela, a
-a njegovo ubrzanje, nego ćemo silu koja deluje na telo izraziti 
-preko promene impulsa kroz vreme, odnosno F=dp/dt, gde 
-p predstavlja impuls tela, a t vreme.
+Da bi smo mogli opisati kretanje lanca koristimo II Njutnov zakon.
+Kako je masa promenljiva ne moze da se koristi II njutnov zakon
+u obliku $F=ma$, gde je $F$ sila koja deluje na telo, $m$ masa tela, a
+$a$ njegovo ubrzanje, nego ćemo silu koja deluje na telo izraziti 
+preko promene impulsa kroz vreme, odnosno $F=dp/dt$, gde 
+$p$ predstavlja impuls tela, a $t$ vreme.
 
 \section{Formiranje modela}
-
+Neka je $x(t)$ visina lanca u trenutku $t$. U početnom trenutku važi:
 \[
-x\left( 0 \right)=0,\quad x'\left( 0 \right)=1,
+x\left( 0 \right)=0,\quad x'\left( 0 \right)=0,
 \]
 \[
 F \text{-- konstantna sila uvis},\quad
@@ -65,18 +67,20 @@ T \text{-- težina po dužnom metru},\quad
 g \text{-- ubrzanje gravitacije}
 \]
 
+Neka je $m(x)$ masa dela lanca koji se nalazi u vazduhu kada se vrh 
+lanca nalazi na visini $x$. Za m važi:
 \[
 m\left(x\right) = \frac{T}{g}\,x
 \]
-
+Intenzitet impulsa tela je jednak $p = mv$. Sila Zemljine teže
+ima intenzitet $Fg = Tx$ i ona deluje u suprotnom smeru u odnosu na
+silu F. Prema tome koristeći II Njutnov zakon dobijamo:
 \[
-\frac{d}{dt}\left(mv\right)=F-Tx \text{- koristimo II Njutnov zakon preko impulsa}
+\frac{d}{dt}\left(mv\right)=F-Tx 
 \]
 
-Promena impulsa je jedna 
-razlici F i T*x gde x prdstvalja trenutnu visinu vrha lanca
-Sređivanjem dobijamo
 
+Sređivanjem dobijamo
 
 \[
 \frac{T}{g}\frac{d}{dt}\left(x \, x'\right) = F - Tx
