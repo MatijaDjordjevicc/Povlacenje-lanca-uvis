@@ -130,6 +130,7 @@ x^{2}v^{2} = \frac{Fgx^{2}}{T} - \frac{2gx^{3}}{3}  \quad \left(\text{podelimo i
 v^{2} = \frac{Fg}{T} - \frac{2gx}{3}
 \]
 
+
 Posmatraćemo slučaj kada lanac se diže uvis tako da uzimamo
 pozitivno rešenje brzine
 
@@ -144,6 +145,90 @@ v = \sqrt{\frac{Fg}{T} - \frac{2gx}{3}}
 \[
 dt = \frac{dx}{\sqrt{\frac{Fg}{T} - \frac{2gx}{3}}} \quad \left(\text{integralisemo od početnog trenutka 0 do nekog trenutka t} \quad \int_0^t \right)
 \]
+
+\[
+\int_0^t dt = \int_0^x \frac{dy}{\sqrt{\frac{Fg}{T} - \frac{2gy}{3}}} \quad \left(\text{smena} \quad u=\frac{Fg}{T} - \frac{2gy}{3} \quad dy = - \frac{3}{2g}du \right)
+\]
+
+\[
+t = -\frac{3}{2g} \int_{\frac{Fg}{T}}^{\frac{Fg}{T} - \frac{2gx}{3}} u^{-\frac{1}{2}}du
+\]
+
+\[
+t = \frac{3}{2g} \left( \left. 2\sqrt{u} \right|_{\frac{Fg}{T} - \frac{2gx}{3}}^{\frac{Fg}{T}}   \right) = \frac{3}{g}\left(\sqrt{\frac{Fg}{T}} - \sqrt{\frac{Fg}{T} - \frac{2gx}{3}}\right) \quad \text{pomnožimo jednačinu sa }\frac{g}{3}
+\]
+\[
+\frac{gt}{3} = \sqrt{\frac{Fg}{T}} - \sqrt{\frac{Fg}{T} - {\frac{2gx}{3}}} 
+\]
+\[
+\sqrt{\frac{Fg}{T} - {\frac{2gx}{3}}} = \sqrt{\frac{Fg}{T}} - \frac{gt}{3} \quad \text{kvadriramo obe strane}
+\]
+\[
+\frac{Fg}{T} - {\frac{2gx}{3}} = \frac{Fg}{T} - \frac{2gt}{3}\sqrt{\frac{Fg}{T}} + \frac{g^{2}t^{2}}{9} \quad \text{pomnožimo jednačinu sa }-\frac{3}{2}
+\]
+
+
+
+\[
+x\left(t\right) = t\sqrt{\frac{Fg}{T}} - \frac{gt^2}{6}
+\]
+
+
+
+Ovo je jednačina kretanja vrha lanca uvis. 
+Kretanje je simetrično to možemo videti iz diferencijalne jednačine.
+Sada da ne bi ponovo rešavali istu jednačinu sa vrednosti za 
+negativnu brzinu (kada lanac pada na zemlju). Iz simetričnosti
+možemo zaključiti konačnu jednačinu jednačinu kretanja.
+$t_{max}$ trenutak u kojem je dostignuta maksimalna visina
+odnosno prelaz između dve formule
+
+
+\[
+x\left(t\right) = 
+\begin{cases}
+t\sqrt{\frac{Fg}{T}} - \frac{gt^{2}}{6} & ,\ 0 \le t \le t_{max} \\
+\left(2t_{max} - t\right)\sqrt{\frac{Fg}{T}} - \frac{g\left(2t_{max} -t\right)^{2}}{6} & ,\ t_{max} \le t \le 2t_{max}
+\end{cases}
+\]
+
+Ako nema uticaja sila na gubitak energije sistema on će zauvek
+oscilovati zato je data sledeća formula
+
+\[
+x\left(t\right) = 
+\begin{cases}
+\left(t-2kt_{max}\right)\sqrt{\frac{Fg}{T}} - \frac{g\left(t - 2kt_{max}\right)^{2}}{6} & ,\ t \in [2kt_{max}, \left(2k+1\right)t_{max}] \quad k \in \mathbb{Z}^{+}\cup\{0\} \\
+\left(2\left(k+1\right)t_{max} - t\right)\sqrt{\frac{Fg}{T}} - \frac{g\left(2\left(k+1\right)t_{max} -t\right)^{2}}{6} & ,\ \ t \in [\left(2k+1\right)t_{max}, 2\left(k+1\right)t_{max}] \quad k \in \mathbb{Z}^{+}\cup\{0\}
+\end{cases}
+\]
+
+Na kraju zanima nas ta maksimalna visina koju jednostavno
+dobijamo ubacivanjem da je brzina jednaka 0 u jednačini 
+za kretanje lanca uvis
+
+\[
+v = \sqrt{\frac{Fg}{T} - \frac{2gx}{3}}
+\]
+odakle sledi:
+\[
+x_{max} = \frac{3F}{2T}
+\]
+Potom vreme izračunavamo preko formule od pre jer znamo $x_{max}$:
+\[
+t = \frac{3}{g}\left(\sqrt{\frac{Fg}{T}} - \sqrt{\frac{Fg}{T} - \frac{2gx}{3}}\right)
+\]
+\[
+t = \frac{3}{g}\left(\sqrt{\frac{Fg}{T}}\right)
+\]
+\[
+t = 3\left(\sqrt{\frac{F}{gT}}\right)
+\]
+A vreme kada će lanac pasti na zemlju iz simetričnosti dobijamo
+da je jednako $2t_{max}$
+
+
+
 
 \section{Rezultati}
 
