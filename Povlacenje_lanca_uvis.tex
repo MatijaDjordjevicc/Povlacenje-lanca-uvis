@@ -29,61 +29,61 @@ Filip Nedeljković\\
 
 
 \section{Opis problema}
-Na zemlji leži sklupčan lanac velike dužine i težine T po dužnom metru. U početnom trenutku sa
-nivoa zemlje uvis konstantna sila F deluje na lanac. Lanac počinje da se penje uvis.
+Na zemlji leži sklupčan lanac velike dužine i težine $T$ po dužnom metru. U početnom trenutku sa
+nivoa zemlje uvis konstantna sila $F$ deluje na lanac. Lanac počinje da se penje uvis.
 Izvodimo matematički model kretanja vrha lanca. \\
 Izračunavamo maksimalnu visinu do koje će lanac stići i vreme potrebno da stigne do te visine, kao 
 i vreme za koje će lanac ponovo pasti na zemlju. \\
 
-\section{Fizicka formulacija}
+\section{Formulacija i pretpostavke}
 
-Jedine sile koje deluju na lanac su konstantna sila F  koja vuče vrh lanca 
-naviše i sila Zemljine teže (Fg). U posmatranom modelu nećemo razmarati
-otpor vazduha i trenje podloge. Pretpostavljamo da je da je gravitaciono
-ubrzanje g konstantno. Odbacujemo uticaj rotacije Zemlje na lanac.
+Jedine sile koje deluju na lanac su konstantna sila $F$  koja vuče vrh lanca 
+naviše i sila Zemljine teže $F_{g}$. U posmatranom modelu nećemo razmarati
+otpor vazduha i trenje podloge. Pretpostavljamo da je gravitaciono
+ubrzanje $g$ konstantno. Odbacujemo uticaj rotacije Zemlje na lanac.
 Lanac je dovoljno dugačak tako da se ceo lanac nikada neće podići
 sa zemlje. Pretpostavljamo da je deo lanca koji je podignut
 vertikalan i savršeno prav. Debljinu lanca zanemarujemo.
-Smatramo da je lanac neistegljiv\\
-Na početku  se lanac nalazi na visini od 0m. Početna brzina kojom se kreće lanac je 0m/s. 
+Smatramo da je lanac neistegljiv.\\
+Na početku  se lanac nalazi na visini od $0m$. Početna brzina 
+kojom se kreće lanac je $0\frac{m}{s}$. 
 Ovaj model predstavlja sistem promenljive mase. 
-Početna masa koja se podiže je 0kg. Kako se lanac kreće naviše 
+Početna masa koja se podiže je $0kg$. Kako se lanac kreće naviše 
 tako se menja količina mase koju drži vrh lanca.\\
 Da bi smo mogli opisati kretanje lanca koristimo II Njutnov zakon.
-Kako je masa promenljiva ne moze da se koristi II njutnov zakon
+Kako je masa promenljiva ne može da se koristi II Njutnov zakon
 u obliku $F=ma$, gde je $F$ sila koja deluje na telo, $m$ masa tela, a
 $a$ njegovo ubrzanje, nego ćemo silu koja deluje na telo izraziti 
-preko promene impulsa kroz vreme, odnosno $F=dp/dt$, gde 
+preko promene impulsa kroz vreme, odnosno $F=\frac{dp}{dt}$, gde 
 $p$ predstavlja impuls tela, a $t$ vreme.
 
-\section{Formiranje modela}
-Neka je $x(t)$ visina lanca u trenutku $t$. U početnom trenutku važi:
+\section{Modeliranje uspona lanca}
+Neka su $x(t)$ i $v(t)$ visina i brzina uspona lanca u trenutku $t$. U početnom trenutku važi:
 \[
-x\left( 0 \right)=0,\quad x'\left( 0 \right)=0,
+x\left( 0 \right)=0,\quad v\left( 0 \right)=0.
 \]
-\[
-F \text{-- konstantna sila uvis},\quad
-T \text{-- težina po dužnom metru},\quad
-g \text{-- ubrzanje gravitacije}
-\]
+Neka su zatim:
+$F$ -- konstantna sila uvis,
+$T$ -- težina po dužnom metru,
+$g$ -- ubrzanje gravitacije.\\
 
 Neka je $m(x)$ masa dela lanca koji se nalazi u vazduhu kada se vrh 
-lanca nalazi na visini $x$. Za m važi:
+lanca nalazi na visini $x$. Za $m$ važi:
 \[
 m\left(x\right) = \frac{T}{g}\,x
 \]
 Intenzitet impulsa tela je jednak $p = mv$. Sila Zemljine teže
-ima intenzitet $Fg = Tx$ i ona deluje u suprotnom smeru u odnosu na
-silu F. Prema tome koristeći II Njutnov zakon dobijamo:
+ima intenzitet $F_{g} = Tx$ i ona deluje u suprotnom smeru u odnosu na
+silu $F$. Prema tome koristeći II Njutnov zakon dobijamo:
 \[
 \frac{d}{dt}\left(mv\right)=F-Tx 
 \]
 
 
-Sređivanjem dobijamo
+Sređivanjem dobijamo:
 
 \[
-\frac{T}{g}\frac{d}{dt}\left(x \, x'\right) = F - Tx
+\frac{T}{g}\frac{d}{dt}\left(x \, x'\right) = F - Tx \quad \left(v = x' \right)
 \]
 
 
@@ -100,11 +100,11 @@ x'^{2} + xx'' = g\left(\frac{F}{T} - x\right)
 Transformišemo diferencijalnu jednačinu u lepši oblik pomoću
 
 \[
-x'' = v\frac{dv}{dx}  \quad \left(v = x' \quad v\text{ je brzina}\right) \quad \left(v = \frac{dx}{dt}\right) \quad \left(\frac{dv}{dt} = \frac{dvdx}{dxdt}\right) 
+x'' = v\frac{dv}{dx} \quad \left(v = \frac{dx}{dt}\right) \quad \left(\frac{dv}{dt} = \frac{dvdx}{dxdt}\right) 
 \]
 
 \[
-xv\frac{dv}{dx} + v^{2} = \frac{Fg}{T} - gx \quad \text{pomnožimo obe strane jednačine sa } 2x
+xv\frac{dv}{dx} + v^{2} = \frac{Fg}{T} - gx \quad \text{Pomnožimo obe strane jednačine sa } 2x.
 \]
 
 \[
@@ -119,7 +119,7 @@ Kako je:
 Sledi da je:
 
 \[
-\frac{d}{dx}\left(x^{2}v^{2}\right) = \frac{2Fgx}{T} - 2gx^{2} \quad \left(\text{sada integralimo obe strane jednačine sa} \quad \int_0^x \right)
+\frac{d}{dx}\left(x^{2}v^{2}\right) = \frac{2Fgx}{T} - 2gx^{2} \quad \text{Sada integralimo obe strane jednačine.} 
 \]
 
 \[
@@ -127,7 +127,7 @@ x^{2}v^{2} = \int_0^x \left(\frac{2Fgy}{T} - 2gy^{2}\right)dy
 \]
 
 \[
-x^{2}v^{2} = \frac{Fgx^{2}}{T} - \frac{2gx^{3}}{3}  \quad \left(\text{podelimo izraz sa } x^{2}\right)
+x^{2}v^{2} = \frac{Fgx^{2}}{T} - \frac{2gx^{3}}{3}  \quad \text{Podelimo izraz sa } x^{2}.
 \]
 
 \[
@@ -135,8 +135,8 @@ v^{2} = \frac{Fg}{T} - \frac{2gx}{3}
 \]
 
 
-Posmatraćemo slučaj kada lanac se diže uvis tako da uzimamo
-pozitivno rešenje brzine
+Pošto posmatramo penjanje lanca, uzećemo pozitivno rešenje
+kvadratne jednačine.
 
 \[
 v = \sqrt{\frac{Fg}{T} - \frac{2gx}{3}}
@@ -147,7 +147,7 @@ v = \sqrt{\frac{Fg}{T} - \frac{2gx}{3}}
 \]
 
 \[
-dt = \frac{dx}{\sqrt{\frac{Fg}{T} - \frac{2gx}{3}}} \quad \left(\text{integralisemo od početnog trenutka 0 do nekog trenutka t} \quad \int_0^t \right)
+dt = \frac{dx}{\sqrt{\frac{Fg}{T} - \frac{2gx}{3}}} \quad \text{Integralisemo od početnog trenutka 0 do nekog trenutka t.}
 \]
 
 \[
@@ -159,18 +159,18 @@ t = -\frac{3}{2g} \int_{\frac{Fg}{T}}^{\frac{Fg}{T} - \frac{2gx}{3}} u^{-\frac{1
 \]
 
 \[
-t = \frac{3}{2g} \left( \left. 2\sqrt{u} \right|_{\frac{Fg}{T} - \frac{2gx}{3}}^{\frac{Fg}{T}}   \right) = \frac{3}{g}\left(\sqrt{\frac{Fg}{T}} - \sqrt{\frac{Fg}{T} - \frac{2gx}{3}}\right) \quad \text{pomnožimo jednačinu sa }\frac{g}{3}
+t = \frac{3}{2g} \left( \left. 2\sqrt{u} \right|_{\frac{Fg}{T} - \frac{2gx}{3}}^{\frac{Fg}{T}}   \right) = \frac{3}{g}\left(\sqrt{\frac{Fg}{T}} - \sqrt{\frac{Fg}{T} - \frac{2gx}{3}}\right) \quad \text{Pomnožimo jednačinu sa }\frac{g}{3}.
 \]
 \[
 \frac{gt}{3} = \sqrt{\frac{Fg}{T}} - \sqrt{\frac{Fg}{T} - {\frac{2gx}{3}}} 
 \]
 \[
-\sqrt{\frac{Fg}{T} - {\frac{2gx}{3}}} = \sqrt{\frac{Fg}{T}} - \frac{gt}{3} \quad \text{kvadriramo obe strane}
+\sqrt{\frac{Fg}{T} - {\frac{2gx}{3}}} = \sqrt{\frac{Fg}{T}} - \frac{gt}{3} \quad \text{Kvadriramo obe strane.}
 \]
 \[
-\frac{Fg}{T} - {\frac{2gx}{3}} = \frac{Fg}{T} - \frac{2gt}{3}\sqrt{\frac{Fg}{T}} + \frac{g^{2}t^{2}}{9} \quad \text{pomnožimo jednačinu sa }-\frac{3}{2}
+\frac{Fg}{T} - {\frac{2gx}{3}} = \frac{Fg}{T} - \frac{2gt}{3}\sqrt{\frac{Fg}{T}} + \frac{g^{2}t^{2}}{9} 
 \]
-
+Nakon sređivanja jednačine i množenja obe strane sa $-\frac{3}{2g}$ dobijamo:
 
 
 \[
