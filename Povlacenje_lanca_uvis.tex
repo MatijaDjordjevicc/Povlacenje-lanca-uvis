@@ -38,7 +38,7 @@ i vreme za koje će lanac ponovo pasti na zemlju. \\
 \section{Formulacija i pretpostavke}
 
 Jedine sile koje deluju na lanac su konstantna sila $F$  koja vuče vrh lanca 
-naviše i sila Zemljine teže $F_{g}$. U posmatranom modelu nećemo razmarati
+naviše i sila Zemljine teže $F_{g}$. U posmatranom modelu nećemo razmatrati
 otpor vazduha i trenje podloge. Pretpostavljamo da je gravitaciono
 ubrzanje $g$ konstantno. Odbacujemo uticaj rotacije Zemlje na lanac.
 Lanac je dovoljno dugačak tako da se ceo lanac nikada neće podići
@@ -48,9 +48,9 @@ Smatramo da je lanac neistegljiv.\\
 Na početku  se lanac nalazi na visini od $0m$. Početna brzina 
 kojom se kreće lanac je $0\frac{m}{s}$. 
 Ovaj model predstavlja sistem promenljive mase. 
-Početna masa koja se podiže je $0kg$. Kako se lanac kreće naviše 
-tako se menja količina mase koju drži vrh lanca.\\
-Da bi smo mogli opisati kretanje lanca koristimo II Njutnov zakon.
+Početna masa podignutog dela lanca iznosi $0kg$. 
+Kako se lanac kreće naviše tako se menja masa dela lanca koji visi sa vrha.\\
+Da bismo mogli opisati kretanje lanca koristimo II Njutnov zakon.
 Kako je masa promenljiva ne može da se koristi II Njutnov zakon
 u obliku $F=ma$, gde je $F$ sila koja deluje na telo, $m$ masa tela, a
 $a$ njegovo ubrzanje, nego ćemo silu koja deluje na telo izraziti 
@@ -100,7 +100,7 @@ x'^{2} + xx'' = g\left(\frac{F}{T} - x\right)
 Transformišemo diferencijalnu jednačinu u lepši oblik pomoću
 
 \[
-x'' = v\frac{dv}{dx} \quad \left(v = \frac{dx}{dt}\right) \quad \left(\frac{dv}{dt} = \frac{dvdx}{dxdt}\right) 
+x'' = v\frac{dv}{dx} \quad \left(v = \frac{dx}{dt}\right) \quad \left(\frac{dv}{dt} = \frac{dv}{dx}\frac{dx}{dt}\right) 
 \]
 
 \[
@@ -119,7 +119,7 @@ Kako je:
 Sledi da je:
 
 \[
-\frac{d}{dx}\left(x^{2}v^{2}\right) = \frac{2Fgx}{T} - 2gx^{2} \quad \text{Sada integralimo obe strane jednačine.} 
+\frac{d}{dx}\left(x^{2}v^{2}\right) = \frac{2Fgx}{T} - 2gx^{2} \quad \text{Sada integrališemo obe strane jednačine.} 
 \]
 
 \[
@@ -135,8 +135,8 @@ v^{2} = \frac{Fg}{T} - \frac{2gx}{3}
 \]
 
 
-Pošto posmatramo penjanje lanca, uzećemo pozitivno rešenje
-kvadratne jednačine.
+Pošto posmatramo penjanje lanca, uzimamo pozitivnu vrednost 
+korena.
 
 \[
 v = \sqrt{\frac{Fg}{T} - \frac{2gx}{3}}
@@ -147,7 +147,7 @@ v = \sqrt{\frac{Fg}{T} - \frac{2gx}{3}}
 \]
 
 \[
-dt = \frac{dx}{\sqrt{\frac{Fg}{T} - \frac{2gx}{3}}} \quad \text{Integralisemo od početnog trenutka 0 do nekog trenutka t.}
+dt = \frac{dx}{\sqrt{\frac{Fg}{T} - \frac{2gx}{3}}} \quad \text{Integrališemo od početnog trenutka 0 do nekog trenutka t.}
 \]
 
 \[
@@ -176,17 +176,66 @@ Nakon sređivanja jednačine i množenja obe strane sa $-\frac{3}{2g}$ dobijamo:
 \[
 x\left(t\right) = t\sqrt{\frac{Fg}{T}} - \frac{gt^2}{6}
 \]
+Ovime dobijamo jednačinu kretanja lanca uvis.
 
+\section{Maksimalna visina lanca}
 
+Da bismo dobili maksimalnu visinu koju vrh lanca dostiže koristimo 
+prethodno dobijenu formulu za brzinu:
 
-Ovo je jednačina kretanja vrha lanca uvis. 
-Kretanje je simetrično to možemo videti iz diferencijalne jednačine.
-Sada da ne bi ponovo rešavali istu jednačinu sa vrednosti za 
-negativnu brzinu (kada lanac pada na zemlju). Iz simetričnosti
-možemo zaključiti konačnu jednačinu jednačinu kretanja.
-$t_{max}$ trenutak u kojem je dostignuta maksimalna visina
-odnosno prelaz između dve formule
+\[
+v = \sqrt{\frac{Fg}{T} - \frac{2gx}{3}}
+\]
+Kada se vrh lanca nalazi na maksimalnoj visini tada je brzina kretanja
+lanca jednaka nuli. Ubacivanjem $v=0$ u jednačinu i izražavanjem
+$x$ dobijamo:
+\[
+x_{max} = \frac{3F}{2T}
+\]
+Da bismo dobili vremenski trenutak u kojem lanac dostiže maksimalnu
+visinu koristimo prethodno dobijenu formulu za $t$:
+\[
+t = \frac{3}{g}\left(\sqrt{\frac{Fg}{T}} - \sqrt{\frac{Fg}{T} - \frac{2gx}{3}}\right)
+\]
+Zatim u ovu formulu ubacimo vrednost $x_{max}$:
+\[
+t = \frac{3}{g}\sqrt{\frac{Fg}{T}}
+\]
+\[
+t = 3\sqrt{\frac{F}{gT}}
+\]
 
+\section{Vreme pada lanca na zemlju}
+
+Posmatrajmo kretanje lanca nakon dostizanja maksimalne visine.
+Na lanac i dalje jedino deluju konstantna sila $F$ i sila Zemljine
+teže $F_{g}$. Pošto je pre dostizanja maksimalne visine lanac
+usporavao, zaključujemo da je $F<F_{g}$. Prema tome, nakon
+dostizanja maksimalne visine, lanac će početi da se kreće naniže. 
+Kao i pre, koristeći II Njutnov zakon dobijamo:
+
+\[
+\frac{d}{dt}\left(mv\right)=F-Tx 
+\]
+Radeći isto izvođenje kao za kretanje lanca uvis dobijamo:
+\[
+v^{2} = \frac{Fg}{T} - \frac{2gx}{3}
+\]
+Sada, pošto posmatramo kretanje lanca naniže, uzimamo negativnu
+vrednost korena.\\
+
+Možemo primetiti da je jedina razlika u brzini uspona i spusta
+lanca u znaku. Ovime zaključujemo da je kretanje lanca simetrično.
+Prema tome, vreme potrebno da se lanac iz tačke sa najvećom visinom
+vrati na zemlju je takođe $t_{max}$. Odavde sledi da je vreme
+potrebno da lanac ponovo padne na zemlju nakon početka kretanja
+jednako $2t_{max}$.
+
+\section{Konačni model kretanja}
+
+Koristeći prethodno dobijenu jednačinu kretanja lanca uvis i
+činjenicu da je kretanje lanca simetrično, možemo dobiti formulu
+celokupnog kretanja lanca od početka do ponovnog pada na zemlju.
 
 \[
 x\left(t\right) = 
@@ -196,8 +245,10 @@ t\sqrt{\frac{Fg}{T}} - \frac{gt^{2}}{6} & ,\ 0 \le t \le t_{max} \\
 \end{cases}
 \]
 
-Ako nema uticaja sila na gubitak energije sistema on će zauvek
-oscilovati zato je data sledeća formula
+Ako nakon pada na zemlju i dalje na lanac deluje konstantna
+sila $F$, on će ponovo krenuti da se kreće naviše i ponoviće
+prethodno kretanje. Sve dok sila $F$ deluje na lanac on će oscilovati.
+Takvo kretanje možemo opisati sledećom formulom:
 
 \[
 x\left(t\right) = 
@@ -206,42 +257,6 @@ x\left(t\right) =
 \left(2\left(k+1\right)t_{max} - t\right)\sqrt{\frac{Fg}{T}} - \frac{g\left(2\left(k+1\right)t_{max} -t\right)^{2}}{6} & ,\ \ t \in [\left(2k+1\right)t_{max}, 2\left(k+1\right)t_{max}] \quad k \in \mathbb{Z}^{+}\cup\{0\}
 \end{cases}
 \]
-
-Na kraju zanima nas ta maksimalna visina koju jednostavno
-dobijamo ubacivanjem da je brzina jednaka 0 u jednačini 
-za kretanje lanca uvis
-
-\[
-v = \sqrt{\frac{Fg}{T} - \frac{2gx}{3}}
-\]
-odakle sledi:
-\[
-x_{max} = \frac{3F}{2T}
-\]
-Potom vreme izračunavamo preko formule od pre jer znamo $x_{max}$:
-\[
-t = \frac{3}{g}\left(\sqrt{\frac{Fg}{T}} - \sqrt{\frac{Fg}{T} - \frac{2gx}{3}}\right)
-\]
-\[
-t = \frac{3}{g}\left(\sqrt{\frac{Fg}{T}}\right)
-\]
-\[
-t = 3\left(\sqrt{\frac{F}{gT}}\right)
-\]
-A vreme kada će lanac pasti na zemlju iz simetričnosti dobijamo
-da je jednako $2t_{max}$
-
-
-
-
-\section{Rezultati}
-
-
-
-
-\end{document}
-
-
 
 
 \end{document}
