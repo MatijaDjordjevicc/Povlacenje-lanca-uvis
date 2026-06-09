@@ -14,7 +14,7 @@
 
 \begin{document}
 
-\title{Povlačenje lanca uvis\\ \vskip 0.2in \small{Seminarski rad u okviru kursa\\ Osnove matematičkog modeliranja\\ Matematički fakultet} \vskip 5.0in}
+\title{\huge Povlačenje lanca uvis\\ \vskip 0.2in \large{Seminarski rad u okviru kursa\\ Osnove matematičkog modeliranja\\ Matematički fakultet} \vskip 5.0in}
 
 \author{
 Matija Đorđević\\
@@ -47,7 +47,7 @@ vertikalan i savršeno prav. Debljinu lanca zanemarujemo.
 Smatramo da je lanac neistegljiv.\\
 Na početku  se lanac nalazi na visini od $0m$. Početna brzina 
 kojom se kreće lanac je $0\frac{m}{s}$. 
-Ovaj model predstavlja sistem promenljive mase. 
+Ovaj model predstavlja sistem promenljive mase.\cite{de2012falling}
 Početna masa podignutog dela lanca iznosi $0kg$. 
 Kako se lanac kreće naviše tako se menja masa dela lanca koji visi sa vrha.\\
 Da bismo mogli opisati kretanje lanca koristimo II Njutnov zakon.
@@ -55,7 +55,7 @@ Kako je masa promenljiva ne može da se koristi II Njutnov zakon
 u obliku $F=ma$, gde je $F$ sila koja deluje na telo, $m$ masa tela, a
 $a$ njegovo ubrzanje, nego ćemo silu koja deluje na telo izraziti 
 preko promene impulsa kroz vreme, odnosno $F=\frac{dp}{dt}$, gde 
-$p$ predstavlja impuls tela, a $t$ vreme.
+$p$ predstavlja impuls tela, a $t$ vreme.\cite{urone2020physics}
 
 \section{Modeliranje uspona lanca}
 Neka su $x(t)$ i $v(t)$ visina i brzina uspona lanca u trenutku $t$. U početnom trenutku važi:
@@ -72,7 +72,7 @@ lanca nalazi na visini $x$. Za $m$ važi:
 \[
 m\left(x\right) = \frac{T}{g}\,x
 \]
-Intenzitet impulsa tela je jednak $p = mv$. Sila Zemljine teže
+Intenzitet impulsa tela je jednak $p = mv$.\cite{urone2020physics} Sila Zemljine teže
 ima intenzitet $F_{g} = Tx$ i ona deluje u suprotnom smeru u odnosu na
 silu $F$. Prema tome koristeći II Njutnov zakon dobijamo:
 \[
@@ -258,5 +258,22 @@ x\left(t\right) =
 \end{cases}
 \]
 
+\newpage 
+
+\begin{thebibliography}{3}
+
+\bibitem{de2012falling}
+De Sousa, C{\'e}lia A and Gordo, Paulo M and Costa, Pedro
+\emph{Falling chains as variable-mass systems: theoretical model and experimental analysis},
+European Journal of Physics, \textbf{33}(4), 1007--1020 (2012).
+
+\bibitem{urone2020physics}
+\title{Urone, Paul Peter and Hinrichs, Roger  
+\emph{Physics}, OpenStax, Houston, Texas (2020).}
+Available at: \texttt{https://openstax.org/books/physics/pages/1-introduction}.
+Section consulted: \emph{8.1 Linear Momentum, Force, and Impulse},
+\texttt{https://openstax.org/books/physics/pages/8-1-linear-momentum-force-and-impulse}.
+
+\end{thebibliography}
 
 \end{document}
