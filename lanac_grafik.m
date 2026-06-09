@@ -5,11 +5,11 @@ F=50; %Konstantna sila (N)
 T=10; %Težina po dužnom metru (N/m)
 g=9.81; %Ubrzanje Zemljine teže (m/s^2)
 
-%izrčunato
+%izračunato
 x_max = (3*F)/(2*T);
 t_max = 3*sqrt(F/(T*g));
 
-%%podšavanje prikaza
+%%podešavanje prikaza
 broj_oscilacija = 4;
 n_tacaka = 500; 
 
